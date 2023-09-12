@@ -14,7 +14,7 @@ import com.discord.api.chatter.service.DiscordService;
 import jakarta.servlet.http.HttpServletResponse;
 
 @Controller
-public class HandleMessages {
+public class MessageController {
 
     @Autowired
     private DiscordService discordService;
