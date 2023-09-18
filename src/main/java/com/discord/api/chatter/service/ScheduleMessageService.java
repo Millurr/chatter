@@ -20,7 +20,7 @@ public class ScheduleMessageService {
 
     // cron = "second minute hour <day of month> month day(0-7)"
     // "0 0 12 * * 2" = Wednesday's at 12pm
-    @Scheduled(cron = "0 0 12 * * 2")
+    @Scheduled(cron = "${discord.cron.schedule}")
     public void sendMessageOnSchedule() {
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         Webhook webhook = new Webhook();
